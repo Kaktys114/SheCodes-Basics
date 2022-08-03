@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kyiv - the city of freedom</title>
+    <style>
+      body {
+        background: linear-gradient(175deg, rgb(0, 87, 184) 0%, rgb(255, 215, 0) 100%);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 14px;
+        line-height: 2;
+      }
+      .project {
+        box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.2);
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+        margin: 20px auto;
+        max-width: 50%;
+        padding: 20px;
+      }
+      .headings {
+        text-align: center;
+        font-size: 20px;
+      }
+      h1 {
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      h2 {
+        font-weight: 100;
+      }
+      p {
+        text-indent: 2cm;
+      }
+      img {
+        border: 1px solid black;
+        border-radius: 15px;
+        display: block;
+        margin: 0 auto;
+        max-width: 90%;
+      }
+      a {
+        text-decoration: none;
+        font-size: 12px;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .text-about-war {
+        text-align: center;
+        font-weight: bold;
+        font-size: 15px;
+        text-indent: 0;
+      }
+      span {
+        color: rgb(0, 87, 184);
+      }
+      button {
+        box-shadow: 5px 5px 3px rgba(0, 87, 184, 0.5);
+        border: 1px solid rgb(0, 87, 184);
+        transition: all 200ms ease-in-out;
+        background-color: aliceblue;
+        color: rgb(0, 87, 184);
+        text-decoration: none;
+        border-radius: 30px;
+        padding: 20px 30px;
+        line-height: 22px;
+        font-size: 18px;
+        display: block;
+        margin: 0 auto;
+      }
+      button:hover {
+        box-shadow: 2px 2px 1px rgba(0, 87, 184, 0.5);
+        cursor: pointer;
+      }
+      button:focus {
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0.7;
+      }
+      .coder {
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        font-size: 12px;
+        text-indent: 0;
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="project">
+      <h2 class="headings"><em>I love my Kyiv so much</em>🥰</h2>
+      <h1 class="headings">This year <strong>Kyiv turned 1540 years old</strong>!</h1>
+      <hr />
+      <p>
+        Kyiv (not Kiev!) is a place where the rhythm of history meets a modern urban vibe!<br />
+        The Ukrainian capital is a modern city, home to hundreds of successful startups, cultural
+        events, and cool venues to meet your every need! And when the sun goes down — rich nightlife
+        gets started! In 2013-2014 Kyiv became the center of the Ukrainian Revolution of Dignity.
+        Images of the Maidan made the front pages of media worldwide.
+      </p>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/716/original/1018551380.jpg?1658064449"
+        alt="Panorama of Kyiv"
+      />
+      <p>
+        Legend states that three brothers, Kyi, Shchek, and Khoryv, and their sister Lybid, founded
+        the city. Kyiv thus takes its name from Kyi, the eldest brother. The exact century of the
+        city's foundation has not been determined. Legend has it that Saint Andrew (d. AD 60/70)
+        prophesied the emergence of a great city on the future location of Kyiv - he was allegedly
+        fascinated by the spectacular location on the hilly shores of the Dnieper River. The town is
+        thought to have existed as early as the 6th century, initially as a Slavic settlement.
+        Gradually acquiring eminence as the center of the East Slavic civilization, Kyiv reached its
+        Golden Age as the center of Kievan Rus' in the 10th–12th centuries.
+      </p>
+      <a
+        href="https://en.wikipedia.org/wiki/History_of_Kyiv#:~:text=Kyiv%20officially%20celebrates%20its%20founding,area%20to%2025%2C000%20years%20BC."
+        target="_blank"
+        rel="noreferrer nofollow noopener"
+        >Read more about Kyiv
+      </a>
+      <p class="text-about-war">
+        But now the Russians want to EXTERMINATE my people and me simply by nationality. This is
+        genocide. Genocide - the definition of which I learned at school and did not understand how
+        this could happen. Now, this is my reality.<span>
+          Help Ukrainians in the fight against fascism of the 21st century.</span
+        >
+      </p>
+      <button class="check-button">Support Ukraine</button>
+      <p class="coder">
+        Coded by
+        <a
+          href="https://www.instagram.com/kaktys114/"
+          target="_blank"
+          rel="noreferrer nofollow noopener"
+          >Daria Khroniuk</a
+        >
+      </p>
+    </div>
+    <script>
+      function canDonate() {
+        let age = prompt('How old are you?');
+        return age >= 18;
+      }
+
+      function faceControl() {
+        let country = prompt('Where are you from?').toLowerCase().trim().replace('rusia', 'russia');
+        return country === 'russia';
+      }
+
+      function check() {
+        let name = prompt('What is your name?');
+        if (canDonate()) {
+          if (faceControl()) {
+            alert(`Russian warship go fuck yourself :)`);
+          } else {
+            if (
+              confirm(
+                `Hi, ${name}! Thank you for supporting Ukraine!💙💛 Press "Ok" to help ukrainians⬇`
+              )
+            ) {
+              location.href = 'https://prytulafoundation.org/';
+            } else {
+              alert('Goodbye☹');
+            }
+          }
+        } else {
+          alert(`Hi, ${name}! Thank you for supporting Ukraine!💙💛`);
+        }
+      }
+      let checkButton = document.querySelector('.check-button');
+      checkButton.addEventListener('click', check);
+    </script>
+  </body>
+</html>
