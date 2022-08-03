@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
+      h1 {
+        color: #1a64d6;
+        margin: 0 auto;
+      }
+      h2 {
+        font-weight: 100;
+        margin: 10px;
+      }
+      ul {
+        padding-inline-start: 0;
+        list-style: none;
+        margin: 16px 0px;
+      }
+      li {
+        max-width: 400px;
+        margin: 0px Auto;
+        font-size: 16px;
+        padding: 12px 0px;
+        border-radius: 10px;
+      }
+      li:hover {
+        background: #fffbef;
+      }
+      .weather-today {
+        font-size: 30px;
+      }
+      .next-days {
+        font-size: 16px;
+      }
+      .max-degree {
+        font-weight: bold;
+      }
+      .future-dergee {
+        font-family: monospace;
+        color: #4d4c48;
+        font-size: 16px;
+        opacity: 0.9;
+      }
+      .coder {
+        font-family: monospace;
+        color: #4d4c48;
+        font-size: 16px;
+        opacity: 0.9;
+      }
+      button {
+        transition: all 200ms ease-in-out;
+        border: 1px solid #1a64d6;
+        background: #1a64d6;
+        border-radius: 30px;
+        padding: 16px 22px;
+        font-size: 14px;
+        color: #fff;
+      }
+      button:hover {
+        background: #fff;
+        color: #1a64d6;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Example: https://www.shecodes.io/demos/html_css-->
+    <h1 class="weather-today">
+      <div>⛅</div>
+      Currently 21° in Tokyo
+    </h1>
+    <h2 class="weather-today">13° / <span class="max-degree">23°</span></h2>
+    <ul>
+      <li>
+        <h3 class="next-days">🌧 Tomorrow</h3>
+        <p class="future-dergee">10° / <span class="max-degree">22°</span></p>
+      </li>
+      <li>
+        <h3 class="next-days">🌥 Saturday</h3>
+        <p class="future-dergee">15° / <span class="max-degree">17°</span></p>
+      </li>
+      <li>
+        <h3 class="next-days">☀ Sunday</h3>
+        <p class="future-dergee">25° / <span class="max-degree">28°</span></p>
+      </li>
+    </ul>
+    <button>Change city</button>
+    <p class="coder">Coded by Daria Khroniuk</p>
+  </body>
+</html>
